@@ -23,6 +23,9 @@
     background-color: #27262A;
 
 }
+.close {
+    display: none;
+}
 .appLogo {
     display: flex;
     align-items: center;
@@ -94,6 +97,50 @@
     font-family: "Montserrat", sans-serif;
 
 }
+/* MENU PHONE */
+.phone {
+    display: none;
+justify-content: center;}
+.phoneMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* align-items: center; */
+    width: 80vw;
+    background-color: #444;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    }
+    
+    .menu-item .vertical-line {
+        width: 5px;
+        height: 100%;
+        background-color: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+        }
+        
+        .menu-item .text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    margin-left: 10px;
+    color: white;
+}
+
+.menu-item.active .text {
+    color: #8D81AC;
+}
+
+.menu-item.active .vertical-line {
+    background-color: #8D81AC;
+}
 /* EDITOR */
 .editor {
     /* height: 300px; */
@@ -104,6 +151,7 @@
 }
  .downoload {
     position: relative;
+    bottom:25px;
     border-radius: 37px;
     padding: 10px;
     background-color: #8D81AC;
@@ -407,6 +455,7 @@ margin-bottom: 30px;
     .editor p {
         font-weight: 300;
         font-size: 17px;
+        padding: 0px 20px 0px;
     }
     .features {
         flex-direction: column;
@@ -426,6 +475,7 @@ margin-bottom: 30px;
     /* Sekil kenara attached deyil */
     .companies {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0px 30px 0px;
     }
     .plans {
         grid-template-columns: repeat(2,1fr);
@@ -442,7 +492,7 @@ margin-bottom: 30px;
         display: none;
     }
 }
-@media  screen and (min-width:320px) {
+@media  screen and (min-width:320px) and (max-width:767px){
     .imgText
     {
         flex-direction: column;
@@ -597,5 +647,8 @@ margin-bottom: 30px;
 }
 .github {
     gap: 10px;
+}
+.close{
+    width: 25px;
 }
 }
